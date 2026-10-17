@@ -198,10 +198,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-/* notes:
-1- alignment: it is used to align the child widget inside the container not to control the position of the container itself.
-2- padding: it is used to give space inside the container between the child and the container.
-3- margin: it is used to give space outside the container between the container and other widgets.
-4- You can't add color outside decoration in container widget because it will give error so you have to use color inside decoration.
-*/
 
