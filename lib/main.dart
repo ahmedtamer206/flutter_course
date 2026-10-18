@@ -9,6 +9,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('ListView Example')),
+        body: ListView(
+          children: const <Widget>[
+            ListTile(leading: Icon(Icons.map), title: Text('Map')),
+            ListTile(leading: Icon(Icons.photo_album), title: Text('Album')),
+            ListTile(leading: Icon(Icons.phone), title: Text('Phone')),
+          ],
+        ),
+      ),
+    );
   }
 }
