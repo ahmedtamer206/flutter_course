@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("")),
+        appBar: AppBar(title: Text("Radio")),
         body: Container(
           padding: EdgeInsets.all(10),
           child: Column(
