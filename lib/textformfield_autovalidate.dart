@@ -29,11 +29,11 @@ class _MyAppState extends State<MyApp> {
                 TextFormField(
                   obscureText: hiddenPhone,
                   autovalidateMode: AutovalidateMode.always,
-                  onChanged: (val) {
-                    setState(() {
-                      phone = val;
-                    });
-                  },
+                  // onChanged: (val) {
+                  //   setState(() {
+                  //     phone = val;
+                  //   });
+                  // },
                   onSaved: (val) {
                     phone = val;
                   },
@@ -80,9 +80,12 @@ class _MyAppState extends State<MyApp> {
                   textColor: Colors.white,
                   color: Colors.red,
                   onPressed: () {
-                    if (form.currentState!/*=> FormState? but "!" sure it does not null */.validate()) {
-                      form.currentState!.save(); // store val in phone var
+                    if (form
+                        .currentState! /*=> FormState? but "!" sure it does not null */
+                        .validate()) {
+                      // form.currentState!.save(); // store val in phone var
                       debugPrint("Valid");
+                      debugPrint(phone);
                     } else {
                       debugPrint("Invalid");
                     }
