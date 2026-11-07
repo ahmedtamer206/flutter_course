@@ -13,7 +13,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   GlobalKey<FormState> form = GlobalKey();
   String? phone;
-  // Set hiddenPhone = true "Hidden"
+  // Set hiddenPhone = true "Hidden" but false "Visible"
   bool hiddenPhone = true;
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,7 @@ class _MyAppState extends State<MyApp> {
             child: Column(
               children: [
                 TextFormField(
+                  // to make text that write in field as ....
                   obscureText: hiddenPhone,
                   autovalidateMode: AutovalidateMode.always,
                   // onChanged: (val) {
@@ -41,7 +42,7 @@ class _MyAppState extends State<MyApp> {
                   decoration: InputDecoration(
                     suffixIcon: IconButton(
                       onPressed: () {
-                        // State changed from True to False
+                        // State changed from True to False and verse versa
                         setState(() {
                           hiddenPhone = !hiddenPhone;
                         });
@@ -83,7 +84,7 @@ class _MyAppState extends State<MyApp> {
                     if (form
                         .currentState! /*=> FormState? but "!" sure it does not null */
                         .validate()) {
-                      // form.currentState!.save(); // store val in phone var
+                       form.currentState!.save(); // store val in phone var
                       debugPrint("Valid");
                       debugPrint(phone);
                     } else {
