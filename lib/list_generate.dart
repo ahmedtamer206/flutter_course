@@ -1,5 +1,4 @@
 ﻿import 'package:material_ui/material_ui.dart';
-import 'package:flutter/widgets.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -11,8 +10,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return (
-
-    );
+    return MaterialApp();
   }
 }
