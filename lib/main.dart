@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -9,15 +9,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text('ListView Example')),
-        body: ListView(
-          children: const <Widget>[
-            ListTile(leading: Icon(Icons.map), title: Text('Map')),
-            ListTile(leading: Icon(Icons.photo_album), title: Text('Album')),
-            ListTile(leading: Icon(Icons.phone), title: Text('Phone')),
-          ],
+        body: Center(
+          child: Text('Hello Flutter!'),
         ),
       ),
     );

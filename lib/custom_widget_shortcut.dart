@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+﻿import 'package:material_ui/material_ui.dart';
 import 'package:flutter_course/custom_widget_shortcut2.dart';
 
 void main() {
